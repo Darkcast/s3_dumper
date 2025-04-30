@@ -36,4 +36,4 @@ python3 s3_dumper.py -u https://your-bucket-url.com -t 16
 -t : Number of concurrent threads for downloading [default: 8] (optional)
 
 
-This will download all files from the S3 bucket and save them under the site/urlname.
+This will download all files from the S3 bucket and save them under the site/urlname
