@@ -1,12 +1,29 @@
 #!/usr/bin/env python3
 
 import argparse
+import base64
 import requests
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 import urllib3
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+# Base64-encoded ASCII art Banner
+encoded_art = """
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICBfX18gICAgICAgICBfICAgICAgICAgICAgICAgICAgICAgICAKIF9fX3xfICB8ICAgICAgX3wgfF8gXyBfX19fXyBfX18gX19fIF9fXyAKfF8gLXxfICB8ICAgICB8IC4gfCB8IHwgICAgIHwgLiB8IC1ffCAgX3wKfF9fX3xfX198X19fX198X19ffF9fX3xffF98X3wgIF98X19ffF98ICAKICAgICAgICB8X19fX198ICAgICAgICAgICAgIHxffCAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnkgRGFya2Nhc3QK
+""".strip()
+
+def print_ascii_art(b64_string):
+    if b64_string:
+        try:
+            decoded = base64.b64decode(b64_string).decode('utf-8')
+            print(decoded)
+        except Exception as e:
+            print(f"[!] Failed to decode banner: {e}")
+
+# Print banner
+print_ascii_art(encoded_art)
 
 # Suppress SSL warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -58,7 +75,7 @@ def main():
         return
 
     domain = get_clean_domain(base_url)
-    destination = Path.cwd() / "site" / domain
+    destination = Path.cwd() / "sites" / domain
 
     print(f"[*] Downloading {len(keys)} files using {args.threads} threads...")
 
