@@ -1,17 +1,16 @@
 ```
-
-                                         
-     ___         _                       
- ___|_  |      _| |_ _ _____ ___ ___ ___ 
+     ___         _
+ ___|_  |      _| |_ _ _____ ___ ___ ___
 |_ -|_  |     | . | | |     | . | -_|  _|
-|___|___|_____|___|___|_|_|_|  _|___|_|  
+|___|___|_____|___|___|_|_|_|  _|___|_|
         |_____|             |_|
                                  by Darkcast
+                                 Version 0.4
 ```
 
 s3_dumper is a Python tool designed to download all files from an open S3 bucket listing, preserving the folder structure on your local system.
 
-It allows you to fetch files from publicly available S3 buckets and download them in parallel using threads to increase download speed. The files are organized into a directory named after the domain of the provided URL inside a `site/` folder
+It allows you to fetch files from publicly available S3 buckets and download them in parallel using threads to increase download speed. The files are organized into a directory named after the domain of the provided URL inside a `dump/` folder
 
 ## Installation
 
@@ -35,5 +34,6 @@ python3 s3_dumper.py -u https://your-bucket-url.com -t 16
 
 -t : Number of concurrent threads for downloading [default: 8] (optional)
 
+-l : Pass a list to process multiple buckets (required if -u hasn't been passed)
 
-This will download all files from the S3 bucket and save them under the site/urlname
+This will download all files from the S3 bucket and save them under the dump/urlname
