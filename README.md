@@ -9,7 +9,7 @@
                                  by Darkcast
 ```
 
-S3Dumper is a Python tool designed to download all files from an open S3 bucket listing, preserving the folder structure on your local system.
+s3_dumper is a Python tool designed to download all files from an open S3 bucket listing, preserving the folder structure on your local system.
 
 It allows you to fetch files from publicly available S3 buckets and download them in parallel using threads to increase download speed. The files are organized into a directory named after the domain of the provided URL inside a `site/` folder
 
