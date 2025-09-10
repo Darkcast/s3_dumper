@@ -1,0 +1,30 @@
+[project]
+name = "s3dumper"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Darkcast"},
+]
+dependencies = [
+    "requests[socks]>=2.25.0",
+    "colorama>=0.4.4",
+    "psutil>=5.8.0",
+    "urllib3>=1.26.0",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.0",
+    "flake8>=3.8",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
