@@ -134,5 +134,5 @@ This tool is intended for authorized security testing and research purposes only
 ## License
 This project is intended solely for educational use and authorized security testing. Commercial use is prohibited unless explicitly permitted by the original tool developer.
 
-## Support ?
+## Need support ?
 here's a hug, 🤗 there, there, buddy, there, there.
