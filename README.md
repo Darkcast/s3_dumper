@@ -8,7 +8,7 @@
 
 ```
 
-# S3Dumper
+# s3dumper
 
 S3Dumper is an advanced Python tool designed to download all files from misconfigured S3 buckets with directory listing enabled. It features adaptive threading, sensitive file detection, secret scanning, and stealth capabilities for security research and penetration testing.
 
