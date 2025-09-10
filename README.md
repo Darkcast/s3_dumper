@@ -47,9 +47,25 @@ Linux:
 ```bash
 curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
 ```
-\
-Windows: Download from TruffleHog [Releases](https://github.com/trufflesecurity/trufflehog/releases)
 
+Windows: 
+Download from TruffleHog [Releases](https://github.com/trufflesecurity/trufflehog/releases)
+
+or 
+
+With Chocolatey:
+```bash
+choco install trufflehog
+```
+With Scoop:
+```bash 
+scoop install trufflehog
+```
+
+With Winget:
+```bash
+winget install TruffleHog
+```
 
 ## Install S3Dumper
 Clone or download the repository
