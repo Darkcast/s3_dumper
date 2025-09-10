@@ -1,0 +1,12 @@
+# Core HTTP and networking
+requests[socks]>=2.25.0
+urllib3>=1.26.0
+
+# Process management and system info
+psutil>=5.8.0
+
+# Colored terminal output
+colorama>=0.4.4
+
+# XML parsing (usually included in Python standard library)
+lxml>=4.6.0 
