@@ -12,24 +12,28 @@
 
 S3Dumper is an advanced Python tool designed to download all files from misconfigured S3 buckets with directory listing enabled. It features adaptive threading, sensitive file detection, secret scanning, and stealth capabilities for security research and penetration testing.
 
-## ✨ Features
+## Features
 
-- ** Adaptive Threading**: Automatically adjusts thread count based on performance metrics
-- ** Sensitive File Detection**: Identifies potentially sensitive files (configs, keys, databases, etc.)
-- ** Secret Scanning**: Integrated TruffleHog support for detecting hardcoded secrets
-- ** Stealth Mode**: Random bot user-agents to avoid detection
-- ** Real-time Progress**: Live download progress and performance statistics
-- ** File Categorization**: Automatic classification of downloaded files
-- ** Multi-Platform**: Works on Windows, macOS, and Linux
-- ** Retry Logic**: Robust error handling with exponential backoff
-- ** Detailed Reporting**: Comprehensive security warnings and summaries
+- **Adaptive Threading**: Automatically adjusts thread count based on performance metrics
+- **Sensitive File Detection**: Identifies potentially sensitive files (configs, keys, databases, etc.)
+- **Secret Scanning**: Integrated TruffleHog support for detecting hardcoded secrets
+- **Stealth Mode**: Random bot user-agents to avoid detection
+- **Real-time Progress**: Live download progress and performance statistics
+- **File Categorization**: Automatic classification of downloaded files
+- **Multi-Platform**: Works on Windows, macOS, and Linux
+- **Retry Logic**: Robust error handling with exponential backoff
+- **Detailed Reporting**: Comprehensive security warnings and summaries
 
 ## Requirements
 
 - Python 3.6+
 - Required Python packages:
 ```bash
-pip3 install requests colorama
+requests[socks]
+urllib3
+psutil
+colorama
+lxml
 ```
 
 ## Install TruffleHog (Optional)
@@ -43,8 +47,8 @@ Linux:
 ```bash
 curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
 ```
-
-Windows: Download from TruffleHog Releases
+\
+Windows: Download from TruffleHog [Releases](https://github.com/trufflesecurity/trufflehog/releases)
 
 
 ## Install S3Dumper
@@ -52,7 +56,10 @@ Clone or download the repository
 Install dependencies:
 
 ```bash
-pip3 install requests colorama
+pip3 install requirement.txt
+or
+pdm install
+
 ```
 
 ## Usage
